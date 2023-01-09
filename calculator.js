@@ -10,7 +10,12 @@ app.get('/',(req, res) =>{
 })
 
 app.post('/', (req, res) =>{
-    res.send('Thank for posting that')
+     
+    let num1 = req.body.num1
+    let num2 = req.body.num2
+
+    let result = Number(num1) + Number(num2)
+    res.send('The final result is ' + result )
 })
 
 app.listen(3000, () => {
